@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import SimpsonsQuote from './SimpsonsQuote';
-import More from '../quote/More';
-import { getSimpsonsQuote, getSimpsonsLoading } from '../../selectors/simpsonsSelector';
-import { fetchSimpsonQuote } from '../../actions/simpsonsActions';
+import SimpsonsQuote from '../components/simpsons/SimpsonsQuote';
+import More from '../components/quote/More';
+import { getSimpsonsQuote, getSimpsonsLoading } from '../selectors/simpsonsSelector';
+import { fetchSimpsonQuote } from '../actions/simpsonsActions';
 
-function WithFetch({ quote, loading, more }) {
+function SimpsonsQuotes({ quote, loading, more }) {
 
   useEffect(() => {
     more();
@@ -22,7 +22,7 @@ function WithFetch({ quote, loading, more }) {
   );
 }
 
-WithFetch.propTypes = {
+SimpsonsQuotes.propTypes = {
   quote: PropTypes.shape({
     quote: PropTypes.string.isRequired,
     character: PropTypes.string.isRequired,
@@ -47,4 +47,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(WithFetch);
+)(SimpsonsQuotes);

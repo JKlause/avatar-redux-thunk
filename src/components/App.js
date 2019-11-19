@@ -7,7 +7,7 @@ import {
 import AllCharacters from '../containers/AllCharacters';
 import DisplayCharacterDetail from '../containers/DisplayCharacterDetail';
 import SwansonQuotes from '../containers/SwansonQuotes';
-import WithFetch from '../components/simpsons/WithFetch';
+import SimpsonsQuotes from '../containers/SimpsonsQuotes';
 import NotFound from '../components/NotFound';
 
 export default function App() {
@@ -17,7 +17,7 @@ export default function App() {
         <Route exact path="/" component={AllCharacters} />
         <Route path="/characters/:id" component={DisplayCharacterDetail} />
         <Route path="/quote" component={SwansonQuotes} />
-        <Route path="/simpsons" component={WithFetch} />
+        <Route path="/simpsons" component={SimpsonsQuotes} />
         <Route path="/" component={NotFound} />
       </Switch>
     </Router>
