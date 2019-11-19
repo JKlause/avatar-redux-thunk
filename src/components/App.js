@@ -6,6 +6,8 @@ import {
 } from 'react-router-dom';
 import AllCharacters from '../containers/AllCharacters';
 import DisplayCharacterDetail from '../containers/DisplayCharacterDetail';
+import SwansonQuotes from '../containers/SwansonQuotes';
+import NotFound from '../components/NotFound';
 
 export default function App() {
   return (
@@ -13,6 +15,8 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={AllCharacters} />
         <Route path="/characters/:id" component={DisplayCharacterDetail} />
+        <Route path="/quote" component={SwansonQuotes} />
+        <Route path="/" component={NotFound} />
       </Switch>
     </Router>
   );
