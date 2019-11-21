@@ -7,7 +7,7 @@ import { getQuote, getQuoteLoading } from '../selectors/swansonSelectors';
 import { fetchQuote } from '../actions/swansonActions';
 
 function SwansonQuotes({ quote, loading, more }) {
-
+ 
   useEffect(() => {
     more();
   }, []);
