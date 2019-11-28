@@ -16,3 +16,4 @@ go to localhost:7890 or https://distracted-murdock-7e51dc.netlify.com
 /quote for ron swanson quotes
 /simpsons for simpsons quotes
 /{anything else} to get a 404 page
+ 
